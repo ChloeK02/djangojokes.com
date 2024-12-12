@@ -8,4 +8,9 @@
       <li class="list-group-item">{{ joke.question }}</li>
     {% endfor %}
   </ul>
+  {% for joke in joke_list %}
+  <li class="list-group-item">
+    <a href="{{ joke.get_absolute_url }}">{{ joke.question }}</a>
+  </li>
+{% endfor %}
 {% endblock %}
